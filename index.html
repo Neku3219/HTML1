@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="CSS-Property-test" content="CSS-Property 테스트 하기"> -->
+        <meta name="Date" content="2025-10-22T15:25:00+09:00">
+        <meta http-equiv="Subject" content="CSS-Property 연습">
+        <meta http-equiv="Title" content="CSS-Property">
+        <meta http-equiv="Author" content="CDH">
+        <title>CSS-Property TEST</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- 현재 head 태그에 cdn reset를 import한 상태 -->
+<!-- Currently, cdn reset is imported into the head tag. -->
+<details class="width">
+  <summary class="width-head">
+    property : width (너비,폭)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        width:auto (default)
+        <div class="width-a div">
+          자동으로 너비를 설정합니다
+        </div>
+      </li>
+      
+      <li>
+<!--         width:500px -->
+        <p>width:500px</p>
+        <div class="width-b div">
+<!--           너비를 px값 만큼 설정합니다. -->
+          <p>너비를 px값 만큼 설정합니다.</p>
+        </div>
+      </li>
+      
+      <li>
+        width:50%
+        <div class="width-c div">
+          너비를 브라우저 창의 크기에 비례해서 설정합니다.
+        </div>
+      </li>
+      
+    </ul>
+  </div>
+</details>
+<hr>
+<details class="height">
+  <summary class="height-head">
+    property : height (높이)
+    <!-- 이부분에 헤더를 넣고싶다면 그냥 이 태그를 헤더로 꾸미는게 편할듯-->
+  </summary>
+  <div>
+    <ul>
+      <li>
+        heigth:auto[defalut]
+        <div class="height-a div">
+          높이값이 자동으로 설정
+        </div>
+      </li>
+      <li>
+        height:50px
+        <div class="height-b div">
+          높이값이 할당값만큼 설정
+        </div>
+      </li>
+    </ul>
+  </div>
+</details>
+<hr>
+<details class="display">
+  <summary class="display-head">
+    property : display (표기 방식)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        display:block
+        <div class="display-a div">
+          ~~~~~block~~~~~
+        </div>
+        END
+      </li>
+      <li>
+        display: inline
+        <div class="display-b div">
+          ~~~~~inline~~~~~
+        </div>
+        END
+      </li>
+      <li>
+        display: inline-block
+        <div class="display-c div">
+          ~~~~~inline-block~~~~~
+        </div>
+        END
+      </li>
+    </ul>
+  </div>
+</details>
+<hr>
+<details class="display">
+  <summary class="display-head">
+    property : display (표기방식)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        <p class="paragraph">div : block</p>
+        before
+        <div class="display-d div">
+          String
+        </div>
+        after
+      </li>
+      <li>
+        <p class="paragraph">div : inline</p>
+        before
+        <div class="display-e div">
+          String
+        </div>
+        after
+      </li>
+      <li>
+        <p class="paragraph">div : inline-block</p>
+        before
+        <div class="display-f div">
+          String
+        </div>
+        after
+        <br>
+        before
+        <div class="display-g div display-f"><!--공백--></div>
+        after
+      </li>
+    </ul>
+  </div>
+</details>
+<hr>
+<details class="background">
+  <summary class="background-head">
+    property : background (배경)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        background-color
+        <div class="background-a">
+          
+        </div>
+      </li>
+        background-image
+        <div class="background-b">
+        </div>
+      <li>
+    </ul>
+    
+  </div>
+</details>
+<hr>
+<details class="margin">
+  <summary class=margin-header>
+    margin collapsing (마진 겹침)
+  </summary>
+  <div>
+    <div class="margin-box1">box1</div>
+    <div class="margin-box2">box2</div>
+
+    box1에게 아래공간 40px, box2에게 윗 공간 10px 준 상황<br>
+    여기서 가장 큰 수치인 40px만 단일로 적용된 상황.
+  </div>
+==================================================================================================================================================================
+  <div>
+    
+    <div class=margin-parent>
+      <div class=margin-child>
+        child
+      </div>
+      parent
+    </div>
+    윗 박스들도 child박스에게만 여백을 넣었지만 두 박스 모두 여백이 적용된 상태다.
+  </div>
+==================================================================================================================================================================
+    <div>
+    <div class="margin-parent margin-ex">
+      <div class="margin-child">
+        child
+      </div>
+      parent
+    </div>
+  </div>
+대신 parent에게 padding 속성 값을 구성하거나 padding 속성을 무시하게 설정하면 child 개체에게만 적용된다..
+</details>
+<hr>
+<details class="area">
+  <summary class=area-header>
+    block area (블록 영역)
+  </summary>
+  <div>
+    <div class="area-div1">
+      <div class="area-div2">
+        <div class="area-div3">
+<!--    margin , border , padding 그 어떠한값도 없는 상태일땐 좌상단이 기본위치. "top(0), left(0)" -->          
+        </div>
+      </div>
+    </div>    ==================================================================================================================================================================
+    <div class="area-div1 area-a">
+      <div class="area-div2 area-b">
+        <div class="area-div3 area-c">
+<!--   margin은 요소의 바깥쪽 여백을, padding은 요소의 안쪽 여백(테두리와 내용물 사이)을 담당합니다. margin은 다른 요소와의 간격을 만들고, padding은 요소의 내부 콘텐츠가 테두리에 붙지 않도록 합니다    -->
+        </div>
+      </div>
+    </div>    
+    
+    
+    
+  </div>
+</details>
+<hr>
+<details class=color>
+  <summary class=color-header>
+    property:color (색상)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        <p class="color-text1">text color 1</p>
+      </li>
+      <li>
+        <p class="color-text2">text color 2</p>
+      </li>
+      <li>
+        <p class="color-text3">text color 3</p>
+      </li>
+      <li>
+        <p class="color-text4">text color 4</p>
+      </li>
+    </ul>
+  </div>  
+</details>
+<hr>
+<details class="overflow">
+  <summary class="overflow-header">
+    property:overflow (초과)
+  </summary>
+  <div>
+    <ul>
+      <il>
+        overflow:scroll
+        <div class="overflow-div1 overflow-div">
+          TEXT_TEXT_TEXT_TEXT_TEXT_TEXT
+        </div>
+      </il>
+      <il>
+        overflow:auto
+        <div class="overflow-div2 overflow-div">
+          TEXT_TEXT_TEXT_TEXT_TEXT_TEXT
+        </div>
+      </il>
+      <il>
+        overflow:hidden
+        <div class="overflow-div3 overflow-div">
+          TEXT_TEXT_TEXT_TEXT_TEXT_TEXT
+        </div>
+      </il>
+    </ul>
+  </div>
+</details>
+<hr>
+<details class=line>
+  <summary class=line-header>
+    property:line-height (문자열 높이)
+  </summary>
+  <div>
+    <ul>
+      <li>
+        <div class="line-div">
+          <div class="line-text1">
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 1<br>
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 1
+          </div>
+        </div>
+      </li>
+      
+      <li>
+        <div class="line-div">
+          <div class="line-text2">
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 2<br>
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 2
+          </div>
+        </div>
+      </li>
+      
+      <li>
+        <div class="line-div">
+          <div class="line-text3">
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 3<br>
+            TEXT_TEXT_TEXT_TEXT_TEXT_TEXT : 3
+          </div>          
+        </div>
+      </li>
+    </ul>
+  </div>  
+</details>
+<hr>
+<details class=float>
+  <summary class=float-header>
+    property:float (플로트)
+  </summary>
+  <div>
+    <div class=float-div1>
+      text1
+      <div class=float-div2>text2</div>
+      <div class=float-div3>text3</div>
+      text4
+    </div>
+  </div>
+</details>
+<hr>
+<details class=font>
+  <summary class=font-header>
+    property:font (폰트)
+  </summary>
+  <div>
+    <ul>
+      
+      <il>
+        <p class=font-text1>font-family</p>
+      </il>
+      
+      <il>
+        <p class=font-text2>font-size, font-weight</p>
+      </il>
+      
+      <il>
+        <p class=font-text3>font-sytle</p>
+      </il>
+      
+      <il>
+        <p class=font-text4>font (shorthand property)</p>
+      </il>
+      
+    </ul>
+  </div>
+  
+</details>
+<hr>
+<details class=align>
+  <summary class=align-header>
+    property : text-align (정렬)
+  </summary>
+  <div>
+    <ul>
+      <il>
+        <p class="align-type1 align-p">
+          text-align : left
+        </p>
+      </il>
+      
+      <il>
+        <p class="align-type2 align-p">
+          text-align : center
+        </p>
+      </il>
+      
+      <il>
+        <p class="align-type3 align-p">
+          text-align : right
+        </p>
+      </il>
+      
+      <il>
+        <p class="align-type4 align-p">
+          text-align : justify
+        </p>
+      </il>
+    </ul>
+  </div>
+</details>
+<!-- 마우스올리면 클릭 표시하는 이벤트도 만들어야 쓰기 편하겠다-->
+
+<!-- div>ul>li>div 구조에대해서 한번 효율성을 의심해봐야할거같다 뭔가 쓰다보니 귀찮다..... 그냥 이런식으로 꾸미면 구성별로 관리하기편할거같은데 아닌거같기도하고....  -->
+    </body>
+</html>

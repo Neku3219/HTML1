@@ -1,0 +1,286 @@
+summary{
+  margin : 5px 0px 5px 3px; /*위 오른 아래 왼    */
+  display : block;
+  font-size : 24px; /* 16px == default */
+}
+summary:hover{
+  cursor : pointer;
+  /* 클릭하기 표기*/
+}
+
+ul{
+  margin-left : 3px;
+}
+li{
+  margin-top : 5px;
+  margin-bottom : 5px;
+}
+.div{
+  margin-top : 2px;
+}
+.paragraph{
+/*font-weight : bold; == 700  */
+  font-weight : 1000;
+  padding : 10px 0px 3px 0px;
+}
+
+
+div.width-a{
+  /* width:auto  기본 값*/
+  border : 1px solid red;
+}
+div.width-b{
+  width:500px;
+  border : 1px solid green;
+}
+div.width-c{
+  width:50%;
+  border: 1px solid blue;
+}
+
+div.height-a{
+  width : auto; /* 기본값 */
+/*height : auto;  */
+  border:1px solid red;
+}
+div.height-b{
+  width : auto;/* 기본값 */
+  height : 50px;
+  border : 1px solid black;
+}
+
+div.display-a{
+  display : block; /*    */
+  width:50%;
+  height : auto;
+  border: 1px solid red;
+}
+div.display-b{
+  display : inline;
+  width:50%;
+  height : auto;
+  border: 1px solid orange;
+}
+div.display-c{
+  display : inline-block;
+  width:50%;
+  height : auto;
+  border: 1px solid blue;
+}
+div.display-d{
+  background : GreenYellow;
+/* div는 기본형이 block   */
+}
+div.display-e{
+  display : inline;
+  background : Aquamarine
+}
+div.display-f{
+  height : 30px;
+  display : inline-block;
+  background : Silver;
+}
+div.display-g{
+  width:55px; 
+  background : Cornflowerblue;
+/*inner와 outer는 나중에...정확히 뭘 의미하는지 모르겠다*/
+}
+
+div.background-a{
+  width : 500px;
+  height : 125px;
+  background : green;
+}
+div.background-b{
+  width : 500px;
+  height : 300px;
+  background-image : url(https://picsum.photos/id/43/500/300);/*CDN img url*/
+}
+
+div.margin-box1{
+  width : 111px;
+  height: 111px;
+  background : orange;
+  margin-bottom : 40px;
+  
+  text-align: center;
+  line-height: 105px;
+}
+div.margin-box2{
+  width : 100px;
+  height: 100px;
+  background-color : Powderblue;
+  margin-top : 10px;
+  
+  text-align: center;
+  line-height: 105px;
+}
+div.margin-parent{
+  width : 375px; height : 250px;
+  background : Darkblue;
+  
+  
+  color : white;
+  text-align: center;
+  line-height: 75px;
+}
+div.margin-child{
+  width : 125px; height : 85px;
+  background : Khaki;
+  margin-top : 40px;
+  
+  color : black;
+}
+div.margin-ex{
+/*padding : 1px; */
+  overflow : hidden;
+/*overflow 속성이 무엇이길래 padding값을 무시할까    */
+  
+}
+
+div.area-div1{
+  width : 500px; height: 300px;
+  background-color:Deepskyblue;
+}
+div.area-div2{
+  width : 350px; height:175px;
+  background-color:Darkseagreen;
+}
+div.area-div3{
+  width : 250px; height : 100px;
+  background-color:Aliceblue;
+}
+
+div.area-a{
+  overflow : hidden;
+}
+div.area-b{
+  margin:50px; padding:50px; 
+  box-sizing:border-box;
+/*box-sizing에 대해서 나중에 검색이 필요....*/
+}
+div.area-c{
+  
+}
+
+.color-text1{
+  color : Red; 
+}
+.color-text2{
+  color : #990099;
+         /*RRGGBB AA*/
+}
+.color-text3{
+  color : #123E;
+         /*RGBA*/
+}
+.color-text4{
+  color: rgba(100,100,255,0.3); /*red green blue alpha*/
+}
+
+.overflow-div{
+  height:44px; border:1px solid black;
+}
+.overflow-div1{
+  overflow:scroll;
+}
+.overflow-div2{
+  overflow:auto;
+}
+.overflow-div3{
+  overflow:hidden;
+/* 영역에 맞게 내용물이 잘라서 넣는다   
+  다만 이 요소가 padding 요소를 무시하는 이유가...?
+  일단 padding은 테두리 안쪽 여백을 뜻하니깐....
+  
+  이 둘의 연관성은 좀 나중에.....
+  */ 
+}
+
+.line-div{
+  height : 105px;
+  background : lightgray;
+}
+.line-text1,.line-text2,.line-text3{
+  background-color : lightgreen;
+}
+.line-text1{
+  line-height:1;
+}
+.line-text2{
+    line-height:2;
+}
+.line-text3{
+    line-height:3;
+}
+
+.float-div1{
+  background : navy
+}
+.float-div2{
+  width:200px; height:50px;
+  background: magenta;
+  float : left;
+}
+.float-div3{
+  height:100px;
+  background : aquamarine;
+  float : left;
+}
+
+/*  
+  활판인쇄 시대에는 일관성을 갖춘 한 글자꼴의 집합을 타입페이스, 
+  한 타입페이스의 활자 모듬 중 같은 크기 활자 모둠 한 벌을 폰트(font), 
+  그리고 인쇄를 위해 갖추어진 여러 크기와 스타일의 폰트들을 통틀어 폰트패밀리(font family)라고 하였다.
+*/
+.font-text1{
+  font-family : Arial, Helvetica, sans-serif,cursive,monospace;
+/*      폰트의 지정순서는 앞(왼) 쪽이 우선 순위. 지정되지않으면 순서대로 적용됨*/
+/* 어떤 폰트가 사용되고있는지 알려면 웹 개발자 도구 열어서 확인하는거말고는 딱히 없는거같다*/ 
+}
+.font-text2{
+  font-size: 36px;
+  font-weight:900;
+}
+.font-text3{
+  font-style : italic;
+}
+.font-text4{
+  font : italic bold 30px/125px Georgia, serif;
+/*   
+  font : 30px Georgia,serif; 
+         크기    글꼴모음  
+*/
+  background-color:pink;
+/*
+  폰트 숏핸드(속기)속성 == 단축 속성  
+  나는 일단 "단축 명령"이라 생각하고있는데...
+  일단은 font 속성을 사용하려면 font-size(크기),font-family(글꼴)속성은 반드시 지정해야함.
+                                                         
+  font : _font-style_  _font-variant_  _font-weight_  _font-size_  _line-height_  _font-family_
+                                                          필수                         필수
+  
+  https://developer.mozilla.org/ko/docs/Web/CSS/font
+*/
+}
+
+.align-p{
+  width : 300px;
+  height : 50px;
+}
+.align-type1{
+  background-color:orange;
+  text-align:left;
+}
+.align-type2{
+  background:cyan;
+  text-align:center;
+}
+.align-type3{
+  background:lawngreen;
+  text-align:right;
+}
+.align-type4{
+  background-color:lightsteelblue;
+  text-align:justify;
+}
